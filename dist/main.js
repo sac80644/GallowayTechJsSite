@@ -97,18 +97,6 @@ eval("var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!\n * jQ
 
 /***/ }),
 
-/***/ "./src/about/about.js":
-/*!****************************!*\
-  !*** ./src/about/about.js ***!
-  \****************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return aboutContent; });\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);\n\r\n\r\nfunction aboutContent() {\r\n    const element = document.createElement('div');\r\n    element.innerHTML = 'something about this place';\r\n    return element;\r\n}\r\n\r\njquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function() {\r\n    // var divAbout = $('#divAbout');\r\n    // divAbout.append(\"appended text\");\r\n});\r\n\n\n//# sourceURL=webpack:///./src/about/about.js?");
-
-/***/ }),
-
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
@@ -117,7 +105,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _src_about_about__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../src/about/about */ \"./src/about/about.js\");\n\r\n\r\n\r\njquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function() {\r\n    var body = Object(_src_about_about__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\r\n    document.body.appendChild(body);\r\n});\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);\n\r\n// import aboutContent from '../src/about/about';\r\n\r\njquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function() {\r\n    jquery__WEBPACK_IMPORTED_MODULE_0___default()(\"#MainBody\").load(\"about.html\");\r\n});\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ })
 
