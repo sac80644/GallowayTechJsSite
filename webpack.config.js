@@ -2,6 +2,7 @@
 const path = require('path');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const webpack = require('webpack');
 
 module.exports = {
     mode: "development",
@@ -9,6 +10,10 @@ module.exports = {
         path: path.resolve(__dirname, 'dist')
     },
     devtool: '#source-map',
+    devServer: {
+        contentBase: './dist',
+        hot: true
+    },
     plugins: [
         new CleanWebpackPlugin(),
         new CopyWebpackPlugin([
@@ -17,7 +22,8 @@ module.exports = {
                 to: './', 
                 ignore: ['*.js'] 
             }
-        ])
+        ]),
+        new webpack.HotModuleReplacementPlugin()
     ],
     module: {
         rules: [
