@@ -1,5 +1,6 @@
 import $ from 'jquery';
+import './about/about.js';
 
 $(document).ready(function() {
-    $("#MainBody").load("./about/about.html");
+    $("#About").load("./about/about.html");
 });

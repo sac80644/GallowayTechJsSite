@@ -12,13 +12,19 @@ module.exports = {
     plugins: [
         new CleanWebpackPlugin(),
         new CopyWebpackPlugin([
-            // {
-                // from: './wwwroot/img',
-                // to: 'images',
-                // toType: 'dir'
-            // },
-            { from: './src', to: './', ignore: ['*.js'] }
-
+            { 
+                from: './src', 
+                to: './', 
+                ignore: ['*.js'] 
+            }
         ])
-    ]
+    ],
+    module: {
+        rules: [
+            {
+              test: /\.css$/i,
+              use: ['style-loader', 'css-loader'],
+            },
+        ]
+    }
 }
