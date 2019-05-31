@@ -1,13 +1,9 @@
 import $ from 'jquery';
 import './about.css';
+import content from './about.html';
 
-export default function aboutContent() {
-    var divAbout = document.getElementById('divAdbout');
-    const element = document.createElement('div');
-    element.innerHTML = 'dynamic content';
-    return element;
-}
+export default content;
 
 $(document).ready(function() {
-    // $('#About').load('./about/about.html');
+
 });

@@ -1,13 +1,9 @@
 import $ from 'jquery';
 import './contact.css';
+import content from './contact.html';
 
-// export default function contactContent() {
-//     var divContact = document.getElementById('divContact');
-//     const element = document.createElement('div');
-//     element.innerHTML = 'dynamic content';
-//     return element;
-// }
+export default content;
 
 $(document).ready(function() {
-    // $('#Contact').load('./contact/contact.html');
+
 });

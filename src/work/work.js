@@ -1,13 +1,9 @@
 import $ from 'jquery';
 import './work.css';
+import content from './work.html';
 
-// export default function workContent() {
-//     var divContact = document.getElementById('divWork');
-//     const element = document.createElement('div');
-//     element.innerHTML = 'dynamic content';
-//     return element;
-// }
+export default content;
 
 $(document).ready(function() {
-    // $('#Work').load('./work/work.html');
+
 });

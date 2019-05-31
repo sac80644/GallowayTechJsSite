@@ -1,17 +1,22 @@
 import $ from 'jquery';
-import './about/about.js';
-import './contact/contact.js';
-import './work/work.js';
+import contentAbout from './about/about.js';
+import contentContact from './contact/contact.js';
+import contentWork from './work/work.js';
 
 $(document).ready(function() {
-    $("#About").load("./about/about.html");
-    $("#Contact").load("./contact/contact.html");
-    $("#Work").load("./work/work.html");
+    $("#About").replaceWith(contentAbout);
+    $("#Contact").replaceWith(contentContact);
+    $("#Work").replaceWith(contentWork);
 });
 
 if(module.hot) {
     module.hot.accept('./about/about.js', function() {
         console.log('accepting hmr from about');
-        $("#About").load("./about/about.html");
+    })
+    module.hot.accept('./work/work.js', function() {
+        console.log('accepting hmr from work');
+    })
+    module.hot.accept('./contact/contact.js', function() {
+        console.log('accepting hmr from contact');
     })
 }

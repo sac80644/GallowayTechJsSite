@@ -12,7 +12,7 @@ module.exports = {
     devtool: '#source-map',
     devServer: {
         contentBase: './dist',
-        hot: true
+        hot: false
     },
     plugins: [
         new CleanWebpackPlugin(),
@@ -31,6 +31,12 @@ module.exports = {
               test: /\.css$/i,
               use: ['style-loader', 'css-loader'],
             },
+            {
+                test: /\.(html)$/,
+                use: {
+                  loader: 'html-loader'
+                }
+              }
         ]
     }
 }
