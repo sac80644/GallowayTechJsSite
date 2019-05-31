@@ -33,14 +33,14 @@ module.exports = {
     plugins: [
         new CleanWebpackPlugin(),
         
-        //bundling everything and using HtmlWebpackPlugin to maintain index.html
-        // new CopyWebpackPlugin([
-        //     { 
-        //         from: './src/index.html', 
-        //         to: './', 
-        //         ignore: ['*.js'] 
-        //     }
-        // ]),
+        //copy what i need to dist
+        new CopyWebpackPlugin([
+            { 
+                from: './src/data', 
+                to: './data', 
+                ignore: ['*.js'] 
+            }
+        ]),
 
         new HtmlWebpackPlugin({
             template: './src/index.html'
