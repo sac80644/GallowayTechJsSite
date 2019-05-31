@@ -2,6 +2,9 @@ import $ from 'jquery';
 import contentAbout from './about/about.js';
 import contentContact from './contact/contact.js';
 import contentWork from './work/work.js';
+import 'bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './site.css';
 
 $(document).ready(function() {
     $("#About").replaceWith(contentAbout);
