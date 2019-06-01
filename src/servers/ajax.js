@@ -1,7 +1,7 @@
 import $ from 'jquery';
 
 function Get(callback) {
-    GetJQuery(callback);
+    Fetch(callback);
 }
 
 function GetXhr(callback) {
@@ -34,4 +34,21 @@ function GetJQuery(callback) {
         }
     });
 }
-export { Get, GetXhr, GetJQuery }
+
+function Fetch(callback) {
+    fetch('http://localhost:8080/data/dynamic.html')
+        .then(function(response) {
+            if(response.ok) {
+                return response.text();
+            }
+            throw new Error("Request error: " + response.status + ' ' + response.statusText);
+        })
+        .then(function(text) {
+            callback(text);
+        })
+        .catch(function(error) {
+            callback(error.message);
+        });
+}
+
+export { Get, GetXhr, GetJQuery, Fetch }
