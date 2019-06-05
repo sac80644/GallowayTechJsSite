@@ -1,0 +1,20 @@
+div #portfolio-section {
+    /* background-color: whitesmoke; */
+    padding: 2em;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.flex-container > div {
+    background-color: #f1f1f1;
+    width: 300px;
+    margin: 5px;
+}
+
+.portfolio img {
+    max-width: 100%;
+}
