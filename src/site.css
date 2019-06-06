@@ -1,3 +1,4 @@
-div {
-    padding: 10px;
+div #ajaxContent {
+  background-color: #3e8bc5;
+  padding: 2em;
 }

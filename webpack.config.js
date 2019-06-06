@@ -65,7 +65,13 @@ module.exports = {
                 use: {
                   loader: 'html-loader'
                 }
-              }
+            },
+            {
+                test: /\.(png|svg|jpg|gif|ico)$/,
+                use: [
+                    'file-loader'
+                ]
+            }
         ]
     }
 }
