@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import contentHeader from './header/header.js';
+import header from './header/header.js';
 import contentAbout from './about/about.js';
 import contentContact from './contact/contact.js';
 import contentWork from './portfolio/portfolio.js';
@@ -10,7 +10,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './site.css';
 
 $(document).ready(function() {
-    $("#Header").replaceWith(contentHeader);
+    $("#Header").replaceWith(header.content);
     $("#About").replaceWith(contentAbout);
     $("#Contact").replaceWith(contentContact);
     $("#Portfolio").replaceWith(contentWork);
@@ -19,7 +19,14 @@ $(document).ready(function() {
         function(content) {
             $('#ajaxContent').replaceWith(content);
         });    
+
+    hookNavClicks();
 });
+
+function hookNavClicks() {
+    document.getElementById("navbar").addEventListener("click", header.getInfo);
+}
+
 
 if(module.hot) {
     module.hot.accept('./header/header.js', function() {
