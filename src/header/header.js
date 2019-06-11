@@ -21,9 +21,11 @@ let header = new function() {
 //https://www.phpied.com/3-ways-to-define-a-javascript-class/
 
 //can we do an IIF
-// (function header(){
-//     //so something    
-
+// export default (function header(){
+//     this.content = content;
+//     this.getInfo = function() {
+//         alert('here');
+//     }
 // })();
 
 $(document).ready(function() {

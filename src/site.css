@@ -2,3 +2,7 @@ div #ajaxContent {
   background-color: #3e8bc5;
   padding: 2em;
 }
+
+.hide {
+  display: none !important;
+}

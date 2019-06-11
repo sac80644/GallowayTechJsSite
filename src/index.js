@@ -23,8 +23,14 @@ $(document).ready(function() {
     hookNavClicks();
 });
 
+//TODO: needs work:
 function hookNavClicks() {
-    document.getElementById("navbar").addEventListener("click", header.getInfo);
+    // document.getElementById("navbar").addEventListener("click", header.getInfo);
+    document.getElementById("navbar").addEventListener("click", function(){
+        $('#MainBody').hide();
+        $('#AlbumToggle').show();
+        $('#AlbumToggle').removeClass("hide");
+    });
 }
 
 
