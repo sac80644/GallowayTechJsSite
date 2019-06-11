@@ -1,12 +1,12 @@
 import $ from 'jquery';
-import './header.css';
-import content from './header.html';
+import './navbar.css';
+import content from './navbar.html';
 
 
 //https://www.phpied.com/3-ways-to-define-a-javascript-class/
 
 //object literal - singleton
-// let header = {
+// let navbar = {
 //     content: content,
 //     getInfo: function() {
 //         alert('hi');
@@ -14,14 +14,14 @@ import content from './header.html';
 // };
 
 //new function - singleton
-let header = new function() {
+let navbar = new function() {
     this.content = content;
     this.getInfo = function() {
         alert('here');
     }
 };
 
-export default header;
+export default navbar;
 
 $(document).ready(function() {
 
