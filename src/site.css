@@ -27,3 +27,71 @@ img{
     margin-left: auto;
     margin-right: auto;
 }
+
+.homepage h3.category_header {
+  background-color: #f7f6f6;
+  color: rgb(84, 84, 84);
+  padding: 10px 20px 10px 20px;
+  border: solid 1px #e6e6e6;
+  margin-bottom: 20px;
+}
+
+/* ---------------------------------------------------------
+Basic page styling
+---------------------------------------------------------*/
+/* Not required for template or sticky footer method. */
+
+body > .container {
+  padding: 80px 15px 0;
+}
+
+.footer > .container {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+a {
+  color: #3e8bc5
+  ;
+}
+
+a:hover {
+  color: #91C5F2;
+}
+
+.container {
+  max-width: 940px;
+}
+
+.content {
+  font-size: 1.1em;
+}
+
+.jump-target {
+  position: relative;
+  display: block;
+  top: -70px;
+}
+
+.resources {
+  border: solid 1px #ccc;
+}
+
+.resources .resources-header {
+  padding: .1em .5em .1em .5em;
+  background-color: #eaeaed;
+  font-size: 1.25em;
+}
+
+.resources .resources-download-instructions {
+  padding: .5em;  
+  font-size: 1.00em;
+}
+
+.resources .resources-content {
+  padding: .5em;
+  margin-bottom: 1em;
+}
+.resources .resources-content li {
+  list-style: none;
+}
