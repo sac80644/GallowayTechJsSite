@@ -5,7 +5,7 @@ import contentAbout from './about/about.js';
 import contentContact from './contact/contact.js';
 import contentWork from './portfolio/portfolio.js';
 import contentAlbum from './album/album.js'
-import { Get } from './servers/ajax.js';
+// import { Get } from './servers/ajax.js';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './site.css';
@@ -17,10 +17,10 @@ $(document).ready(function() {
     $("#Contact").replaceWith(contentContact);
     $("#Portfolio").replaceWith(contentWork);
     $("#Album").replaceWith(contentAlbum);
-    Get(
-        function(content) {
-            $('#ajaxContent').replaceWith(content);
-        });    
+    // Get(
+    //     function(content) {
+    //         $('#ajaxContent').replaceWith(content);
+    //     });    
 
     hookNavClicks();
 });

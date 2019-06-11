@@ -6,3 +6,24 @@ div #ajaxContent {
 .hide {
   display: none !important;
 }
+
+.fade {
+  -webkit-transition-duration: .50s;
+     -moz-transition-duration: .50s;
+      -ms-transition-duration: .50s;
+       -o-transition-duration: .50s;
+          transition-duration: .50s;
+}
+
+/* ---------------------------------------------------------
+Images
+---------------------------------------------------------*/
+
+img{
+  max-width: 100%;
+  height: auto;
+  width: 100%\9; /* ie8 */
+  display:block;
+    margin-left: auto;
+    margin-right: auto;
+}
