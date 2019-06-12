@@ -28,6 +28,46 @@ img{
     margin-right: auto;
 }
 
+/* ---------------------------------------------------------
+Homepage
+---------------------------------------------------------*/
+
+.homepage h1 {
+  text-align: center;
+  margin: 0px 0px 30px 0px;
+  line-height: 1em;
+}
+
+.homepage h1 .main_line{
+  font-size: .85em;
+  font-weight: 700;
+}
+
+.homepage h1 .minor_line{
+  font-size: .75em;
+  font-weight: 400;
+}
+
+.homepage h2 {
+  text-align: center;
+  font-size: 1.85em;
+  font-weight: 700;
+  margin: 20px 0px 20px 0px
+}
+
+.homepage h3 {
+  font-size: 1.4em;
+  font-weight: 700;
+}
+
+.homepage h3.section_header {
+  background-color: #5cc2fe;
+  color: #212529;
+  padding: 10px 20px 10px 20px;
+  border: solid 1px #e6e6e6;
+  margin-bottom: 20px;
+}
+
 .homepage h3.category_header {
   background-color: #f7f6f6;
   color: rgb(84, 84, 84);
@@ -36,12 +76,30 @@ img{
   margin-bottom: 20px;
 }
 
+.homepage h4 {
+  font-size: 1.2em;
+  font-weight: normal;
+}
+
+.homepage h4 .card_header {
+  font-size: 1.2em;
+}
+
+.homepage p{
+  font-size: 1.1em;
+}
+
+.homepage .blurb{
+  margin-bottom: 1.5em;
+}
+
+
 /* ---------------------------------------------------------
 Basic page styling
 ---------------------------------------------------------*/
 /* Not required for template or sticky footer method. */
 
-body > .container {
+#MainBody > .container {
   padding: 80px 15px 0;
 }
 

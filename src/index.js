@@ -5,6 +5,8 @@ import contentAbout from './about/about.js';
 import contentContact from './contact/contact.js';
 import contentWork from './portfolio/portfolio.js';
 import contentAlbum from './album/album.js'
+import contentArticles from './articles/articles.js';
+import contentFooter from './footer/footer.js';
 // import { Get } from './servers/ajax.js';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -14,8 +16,11 @@ $(document).ready(function() {
     $("#Navbar").replaceWith(navbar.content);
     $("#Header").replaceWith(header.content);
     $("#About").replaceWith(contentAbout);
-    $("#Contact").replaceWith(contentContact);
-    $("#Portfolio").replaceWith(contentWork);
+    // $("#Contact").replaceWith(contentContact);
+    // $("#Portfolio").replaceWith(contentWork);
+    $("#Articles").replaceWith(contentArticles.content);
+    $("#Footer").replaceWith(contentFooter.content);
+
     $("#Album").replaceWith(contentAlbum);
     // Get(
     //     function(content) {

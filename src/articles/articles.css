@@ -1,0 +1,128 @@
+/* ---------------------------------------------------------
+Articles
+---------------------------------------------------------*/
+
+.article h1{
+    font-weight: bold;
+    font-family: 'Muli', sans-serif;
+    text-align: center;
+    margin-bottom:10px;
+  }
+  
+  .article header {
+    margin: 30px 0 30px 0;
+  }
+  
+  .article .content{
+    font-family: "Computer Modern", serif;
+  }
+  
+  .article .content p, .article .content li{
+    font-size: 1.25em;
+  }
+  
+  .article .content p{
+    padding-top:.25em;
+    padding-bottom:.25em;
+  }
+  
+  .article .content p .mjx-math {
+    font-size: 1em;
+  }
+  
+  .article .content blockquote{
+    font-style: italic;
+    padding: 0 4em 0 4em;
+    line-height: 1.4em;
+    color: #776f68;
+  }
+  
+  .article .article_date{
+    font-size: 1.4em;
+    text-align: center;
+    font-family: 'Muli', sans-serif;
+  }
+  
+  .article h2{
+    font-size: 1.6em;
+    margin-top: 1em;
+    margin-bottom: .5em;
+    font-family: 'Muli', sans-serif;
+    font-weight: bold;
+  }
+  
+  .article h3{
+    font-size: 1.4em;
+    font-family: 'Muli', sans-serif;
+    font-weight: bold;
+  }
+  
+  .article h4{
+    font-size: 1.2em;
+    font-family: 'Muli', sans-serif;
+    font-weight: bold;
+  }
+  
+  .article h5{
+    font-size: 1.1em;
+    font-family: 'Muli', sans-serif;
+    font-weight: bold;
+  }
+  
+/* ---------------------------------------------------------
+Homepage cards
+---------------------------------------------------------*/
+
+.homepage .card{
+    border-radius: 0rem;
+    margin-bottom: 20px;
+  }
+  
+  .homepage .card-header {
+    background-color: rgba(255, 255, 255, 1);
+  }
+  
+  .homepage .card-body ul{
+      padding-left: 20px;
+      margin-bottom: 0;
+    }
+  
+    .homepage .card-body li{
+      font-size: 1.05em;
+    }
+  
+    .homepage .card-body .publish-date{
+      margin-bottom: 5px;
+    }
+  
+    .homepage .card-body .excerpt{
+      margin-bottom: 15px;
+    }
+  
+
+  
+    .homepage .article_list li{
+      font-size: 1em;
+    }
+  
+    .article_list .date_published {
+      font-size: .7em;
+    }
+  
+    .homepage .article_list {
+      -webkit-columns: 1;
+      -moz-columns: 1;
+      columns: 1;
+    }
+   
+    @media (min-width: 480px) {
+      .homepage .article_list {
+        -webkit-columns: 1;
+        -moz-columns: 1;
+        columns: 1;
+      }
+      
+      .homepage .article_list li{
+        font-size: 1.2em;
+      }
+    }
