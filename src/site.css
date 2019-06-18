@@ -99,6 +99,13 @@ Basic page styling
 ---------------------------------------------------------*/
 /* Not required for template or sticky footer method. */
 
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px !important;
+  color: #505050;
+  font-family: 'Muli', sans-serif;
+}
+
 #MainBody > .container {
   padding: 80px 15px 0;
 }

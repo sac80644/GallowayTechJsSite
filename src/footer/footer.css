@@ -5,12 +5,6 @@ html {
     position: relative;
     min-height: 100%;
   }
-  body {
-    /* Margin bottom by footer height */
-    margin-bottom: 60px !important;
-    color: #505050;
-    font-family: 'Muli', sans-serif;
-  }
   .footer {
     position: absolute;
     bottom: 0;
@@ -22,5 +16,4 @@ html {
     background-color: whitesmoke;
     padding-top: 0rem;
     padding-bottom: 0rem;
-    
   }

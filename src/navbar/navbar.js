@@ -8,8 +8,8 @@ import content from './navbar.html';
 //object literal - singleton
 let navbar = {
     content: content,
-    getInfo: function() {
-        alert('hi');
+    hook: function() {
+        //put a hook here...
     }
 };
 

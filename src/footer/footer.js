@@ -5,8 +5,8 @@ import content from './footer.html';
 
 let footer = {
     content: content,
-    getInfo: function() {
-        alert('hi');
+    hook: function() {
+        //put a hook here...
     }
 };
 

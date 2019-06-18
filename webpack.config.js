@@ -36,8 +36,8 @@ module.exports = {
         //copy what i need to dist
         new CopyWebpackPlugin([
             { 
-                from: './src/data', 
-                to: './data', 
+                from: './src/content', 
+                to: './content', 
                 ignore: ['*.js'] 
             }
         ]),

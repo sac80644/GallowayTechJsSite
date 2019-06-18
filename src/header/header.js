@@ -5,8 +5,8 @@ import content from './header.html';
 
 let header = {
     content: content,
-    getInfo: function() {
-        alert('hi');
+    hook: function() {
+        //put a hook here...
     }
 };
 

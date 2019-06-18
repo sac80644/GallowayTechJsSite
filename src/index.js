@@ -1,11 +1,11 @@
 import $ from 'jquery';
 import navbar from './navbar/navbar.js';
 import header from './header/header.js';
-import contentAbout from './about/about.js';
-import contentContact from './contact/contact.js';
-import contentWork from './portfolio/portfolio.js';
-import contentAlbum from './album/album.js'
-import contentArticles from './articles/articles.js';
+import about from './about/about.js';
+import contact from './contact/contact.js';
+import work from './portfolio/portfolio.js';
+import album from './album/album.js'
+import articles from './articles/articles.js';
 import contentFooter from './footer/footer.js';
 // import { Get } from './servers/ajax.js';
 import 'bootstrap';
@@ -15,19 +15,21 @@ import './site.css';
 $(document).ready(function() {
     $("#Navbar").replaceWith(navbar.content);
     $("#Header").replaceWith(header.content);
-    $("#About").replaceWith(contentAbout);
-    // $("#Contact").replaceWith(contentContact);
-    // $("#Portfolio").replaceWith(contentWork);
-    $("#Articles").replaceWith(contentArticles.content);
+    $("#About").replaceWith(about.content);
+    // $("#Contact").replaceWith(contact.content);
+    // $("#Portfolio").replaceWith(work.content);
+    $("#Articles").replaceWith(articles.content);
     $("#Footer").replaceWith(contentFooter.content);
 
-    $("#Album").replaceWith(contentAlbum);
+    $("#Album").replaceWith(album.content);
+
     // Get(
     //     function(content) {
     //         $('#ajaxContent').replaceWith(content);
     //     });    
 
     hookNavClicks();
+    articles.hook();
 });
 
 //TODO: needs work:
@@ -42,7 +44,7 @@ function hookNavClicks() {
             $('#AlbumToggle').addClass('show');
 
         }
-        else if(e.target.id == 'Home') {
+        else if(e.target.id == 'Home' || e.target.id == 'NavHome') {
             $('#AlbumToggle').hide();
             $('#AlbumToggle').removeClass('show');
             $('#MainBody').show();
