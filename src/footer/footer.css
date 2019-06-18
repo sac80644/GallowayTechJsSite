@@ -19,4 +19,8 @@ html {
     height: 60px;
     line-height: 60px; /* Vertically center the text there */
     font-size: 15px;
+    background-color: whitesmoke;
+    padding-top: 0rem;
+    padding-bottom: 0rem;
+    
   }
