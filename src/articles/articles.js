@@ -2,6 +2,7 @@ import $ from 'jquery';
 import './articles.css';
 import content from './articles.html';
 import { Get } from '../servers/ajax.js';
+import contentObject from '../content/content.js';
 
 
 let articles = {
@@ -16,29 +17,28 @@ export default articles;
 
 $(document).ready(function() {
 
-    var url = 'http://localhost:8080/content/what_patterns.html';
+    // var url = 'http://localhost:8080/content/what_patterns.html';
 
-    Get(url, function(content) {
-        $('#ArticleContent').replaceWith(content);
-    });
+    // Get(url, function(content) {
+    //     $('#ArticleContent').replaceWith(content);
+    // });
 
 });
 
 function hookArticleClicks() {
     document.getElementById("Articles").addEventListener("click", function(e){
 
-        if(e.target.id == 'what-is-pattern-click') {
-            // $('#MainBody').hide();
-            // $('#MainBody').removeClass('show');
-            $('#ArticleToggle').show();
-            $('#ArticleToggle').addClass('show');
+        var toggleTarget = document.getElementById(e.target.id).getAttribute('toggle')
+        $('#' + toggleTarget).show();
+        $('#' + toggleTarget).addClass('show');
 
-        }
-        else if(e.target.id == 'Home' || e.target.id == 'NavHome') {
-            $('#AlbumToggle').hide();
-            $('#AlbumToggle').removeClass('show');
-            $('#MainBody').show();
-            $('#MainBody').addClass('show');
-        }
+        var content = document.getElementById(e.target.id).getAttribute('content')
+        $('#ArticleContent').replaceWith(contentObject[content]);
+
+
+        // $('#ArticleToggle').show();
+        // $('#ArticleToggle').addClass('show');
+
     });
 }
+

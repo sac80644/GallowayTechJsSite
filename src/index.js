@@ -6,11 +6,11 @@ import contact from './contact/contact.js';
 import work from './portfolio/portfolio.js';
 import album from './album/album.js'
 import articles from './articles/articles.js';
-import contentFooter from './footer/footer.js';
-// import { Get } from './servers/ajax.js';
+import footer from './footer/footer.js';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './site.css';
+// import './content/content.js';
 
 $(document).ready(function() {
     $("#Navbar").replaceWith(navbar.content);
@@ -19,22 +19,17 @@ $(document).ready(function() {
     // $("#Contact").replaceWith(contact.content);
     // $("#Portfolio").replaceWith(work.content);
     $("#Articles").replaceWith(articles.content);
-    $("#Footer").replaceWith(contentFooter.content);
+    $("#Footer").replaceWith(footer.content);
 
     $("#Album").replaceWith(album.content);
 
-    // Get(
-    //     function(content) {
-    //         $('#ajaxContent').replaceWith(content);
-    //     });    
-
+    //event hooks
     hookNavClicks();
     articles.hook();
 });
 
 //TODO: needs work:
 function hookNavClicks() {
-    // document.getElementById("navbar").addEventListener("click", header.getInfo);
     document.getElementById("navbar").addEventListener("click", function(e){
 
         if(e.target.id == 'PhotoAlbum') {
@@ -73,5 +68,5 @@ if(module.hot) {
 }
 
 $(document).ready(function() {
-    // $('#AlbumToggle').show();
+
 });
