@@ -2,7 +2,7 @@ import $ from 'jquery';
 import './articles.css';
 import content from './articles.html';
 import { Get } from '../servers/ajax.js';
-import contentObject from '../content/content.js';
+import contentCollection from '../content/content.js';
 
 
 let articles = {
@@ -17,28 +17,30 @@ export default articles;
 
 $(document).ready(function() {
 
-    // var url = 'http://localhost:8080/content/what_patterns.html';
-
-    // Get(url, function(content) {
-    //     $('#ArticleContent').replaceWith(content);
-    // });
 
 });
 
 function hookArticleClicks() {
+
     document.getElementById("Articles").addEventListener("click", function(e){
 
-        var toggleTarget = document.getElementById(e.target.id).getAttribute('toggle')
-        $('#' + toggleTarget).show();
-        $('#' + toggleTarget).addClass('show');
+        var clickedBy = document.getElementById(e.target.id);
+        if (clickedBy) {
+            $('#ArticleToggle').show();
+            $('#ArticleToggle').addClass('show');
+            var content = clickedBy.getAttribute('content')
+            document.getElementById('ArticleContent').innerHTML = contentCollection[content];
+        }
+    });
+}
 
-        var content = document.getElementById(e.target.id).getAttribute('content')
-        $('#ArticleContent').replaceWith(contentObject[content]);
+//optional - use to fetch content off server.  does not require pre-loading of content via import.
+function GetContent(content) {
+    var baseUrl = 'http://localhost:8080/content/';
+    var url = baseUrl + content;
 
-
-        // $('#ArticleToggle').show();
-        // $('#ArticleToggle').addClass('show');
-
+    Get(url, function(content) {
+        document.getElementById('ArticleContent').innerHTML = content;
     });
 }
 
