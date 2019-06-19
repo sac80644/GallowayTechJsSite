@@ -1,26 +1,56 @@
 import $ from 'jquery';
-import contentHeader from './header/header.js';
-import contentAbout from './about/about.js';
-import contentContact from './contact/contact.js';
-import contentWork from './portfolio/portfolio.js';
-import contentAlbum from './album/album.js'
-import { Get } from './servers/ajax.js';
+import navbar from './navbar/navbar.js';
+import header from './header/header.js';
+import about from './about/about.js';
+import work from './portfolio/portfolio.js';
+import album from './album/album.js'
+import articles from './articles/articles.js';
+import footer from './footer/footer.js';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './site.css';
 
 $(document).ready(function() {
-    $("#Header").replaceWith(contentHeader);
-    $("#About").replaceWith(contentAbout);
-    $("#Contact").replaceWith(contentContact);
-    $("#Portfolio").replaceWith(contentWork);
-    $("#Album").replaceWith(contentAlbum);
-    Get(
-        function(content) {
-            $('#ajaxContent').replaceWith(content);
-        });    
+    $("#Navbar").replaceWith(navbar.content);
+    $("#Header").replaceWith(header.content);
+    $("#About").replaceWith(about.content);
+    // $("#Portfolio").replaceWith(work.content);
+    $("#Articles").replaceWith(articles.content);
+    $("#Album").replaceWith(album.content);
+    $("#Footer").replaceWith(footer.content);
+
+    //event hooks
+    hookNavClicks();
+    articles.hook();
+    navbar.hook();
 });
 
+//TODO: needs work:
+function hookNavClicks() {
+    document.getElementById("navbar").addEventListener(navbar.events.type, function(e){
+
+        //TODO: needs a change
+        if (e.type == 'navMenuClick') {
+            $('#ArticleToggle').hide();
+            $('#ArticleToggle').removeClass('show');
+        }
+
+        if(e.detail == 'menu-photo-album') {
+            $('#MainBody').hide();
+            $('#MainBody').removeClass('show');
+            $('#AlbumToggle').show();
+            $('#AlbumToggle').addClass('show');
+        }
+        else if(e.detail == 'menu-home' || e.detail == 'nav-home') {
+            $('#AlbumToggle').hide();
+            $('#AlbumToggle').removeClass('show');
+            $('#MainBody').show();
+            $('#MainBody').addClass('show');
+        }
+    });
+}
+
+//webpack hmr
 if(module.hot) {
     module.hot.accept('./header/header.js', function() {
         console.log('accepting hmr from header');
@@ -38,3 +68,7 @@ if(module.hot) {
         console.log('accepting hmr from album');
     })
 }
+
+$(document).ready(function() {
+
+});

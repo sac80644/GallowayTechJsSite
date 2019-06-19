@@ -1,16 +1,16 @@
 import $ from 'jquery';
-import './header.css';
-import content from './header.html';
+import './footer.css';
+import content from './footer.html';
 
 
-let header = {
+let footer = {
     content: content,
     hook: function() {
         //put a hook here...
     }
 };
 
-export default header;
+export default footer;
 
 
 $(document).ready(function() {

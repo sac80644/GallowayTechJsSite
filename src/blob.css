@@ -1,0 +1,196 @@
+  
+
+/* ---------------------------------------------------------
+Technical Notes
+---------------------------------------------------------*/
+
+.technica_note, .page {
+  font-family: 'Muli', sans-serif;
+}
+
+.technical_note .technical_note_date{
+  margin-bottom:1em;
+}
+
+.technical_note .mjx-math{
+  font-size: 1.1em;
+}
+
+.technical_note h1, .page h1{
+  font-size: 1.8rem;
+}
+
+.technical_note h2{
+  font-size: 1.3em;
+  font-weight: bold;
+  margin-top: 1em;
+  margin-bottom: .5em;
+}
+
+.technical_note h3{
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-top: 1em;
+}
+
+.technical_note h4{
+  font-size: 1.05em;
+  font-weight: bold;
+  margin-top: 1em;
+}
+
+.technical_note h5{
+  font-size: 1em;
+  font-weight: bold;
+  margin-top: 1em;
+}
+
+
+
+/* ---------------------------------------------------------
+Biography
+---------------------------------------------------------*/
+
+.biography{
+  padding: 1em;
+  border: solid 1px #e6e6e6;
+  margin-top: 3em;
+}
+
+.biography p{
+  margin: 0;
+  font-style: italic;
+  font-family: "Computer Modern";
+  font-size: 1.2em;
+  color:#666666;
+}
+
+/* ---------------------------------------------------------
+Code
+---------------------------------------------------------*/
+
+pre code{
+  color:#747474;
+}
+
+pre {
+  padding: .5em;
+  display: block;
+  margin-bottom: .5em;
+  font-size: .85em;
+}
+
+.highlight pre{
+  border: 1px solid #ccc;
+  line-height: 1.42857143;
+  padding: 1em;
+}
+
+code{
+  color: #F05138;
+}
+/* ---------------------------------------------------------
+Images
+---------------------------------------------------------*/
+
+img{
+  max-width: 100%;
+  height: auto;
+  width: 100%\9; /* ie8 */
+  display:block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ---------------------------------------------------------
+Bug reporting
+---------------------------------------------------------*/
+
+.bug_reporting{
+    padding: 1em;
+    border: solid 1px #e6e6e6;
+    margin-top: 3em;
+
+}
+
+.bug_reporting h4{
+    margin: 0 0 10px 0;
+    font-size: 18px;
+}
+
+.bug_reporting p{
+    margin: 0;
+    font-size: 16px;
+}
+
+.wip{
+    padding: 1em;
+    border: solid 1px #5dc2ff;
+    margin-top: 3em;
+    margin-bottom: 3em;
+}
+
+.wip h4{
+    margin: 0 0 10px 0;
+    font-size: 18px;
+}
+
+.wip p{
+    margin: 0;
+    font-size: 16px;
+}
+
+
+
+/* ---------------------------------------------------------
+Flashcards
+---------------------------------------------------------*/
+
+.flashcard {
+  max-height: 400px !important;
+  -webkit-box-shadow: 8px 8px 5px -4px rgba(140,140,140,0.8);
+  -moz-box-shadow: 8px 8px 5px -4px rgba(140,140,140,0.8);
+  box-shadow: 8px 8px 5px -4px rgba(140,140,140,0.8);
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.flashcard_ad {
+  margin-bottom: 1.5em;
+  font-size: 1.05em;
+}
+
+/* ---------------------------------------------------------
+Tables
+---------------------------------------------------------*/
+
+table{
+  margin: 1em;
+}
+
+table,tr,th,td{
+  font-family: sans-serif;
+  border:1px solid black;
+  border-collapse:collapse;
+  padding: 5px;
+  font-size: .95em;
+}
+
+td, th{
+  text-align:left;
+  vertical-align:middle;
+  word-break:break-all;
+}
+
+th{
+  font-weight:bold;
+}
+
+/* ---------------------------------------------------------
+Render Math
+---------------------------------------------------------*/
+
+div.math{
+  font-size: 1em;
+}

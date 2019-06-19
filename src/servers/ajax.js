@@ -1,10 +1,10 @@
 import $ from 'jquery';
 
-function Get(callback) {
-    Fetch(callback);
+function Get(url, callback) {
+    Fetch(url, callback);
 }
 
-function GetXhr(callback) {
+function GetXhr(url, callback) {
     var xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function(){
         if (xhr.readyState === 4){
@@ -21,7 +21,7 @@ function GetXhr(callback) {
     xhr.send();
 }
 
-function GetJQuery(callback) {
+function GetJQuery(url, callback) {
     $.ajax({
         url : 'http://localhost:8080/data/dynamic.html',
         type : 'GET',
@@ -35,8 +35,9 @@ function GetJQuery(callback) {
     });
 }
 
-function Fetch(callback) {
-    fetch('http://localhost:8080/data/dynamic.html')
+function Fetch(url, callback) {
+
+    fetch(url)
         .then(function(response) {
             if(response.ok) {
                 return response.text();
