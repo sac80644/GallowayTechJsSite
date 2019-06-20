@@ -5,6 +5,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
     mode: "development",
@@ -46,6 +47,8 @@ module.exports = {
             template: './src/index.html'
         }),
 
+        new ExtractTextPlugin("styles.css"),
+
         //can shrink from say 1,795 KB to 355 KB but build time is slow.  use only for production build
         // new UglifyJSPlugin(),
 
@@ -55,10 +58,22 @@ module.exports = {
     module: {
         rules: [
             //importing css into js modules
+            // {
+            //   test: /\.css$/i,
+            //   use: ['style-loader', 'css-loader'],
+            // },
+
+            //moves all required .css into a new file instead of bundling with js
+            //https://github.com/webpack-contrib/extract-text-webpack-plugin
             {
-              test: /\.css$/i,
-              use: ['style-loader', 'css-loader'],
-            },
+                test: /\.css$/,
+                use: ExtractTextPlugin.extract({
+                  fallback: "style-loader",
+                  use: "css-loader"
+                })
+              },
+
+
             //importing html into js modules
             {
                 test: /\.(html)$/,
