@@ -32,7 +32,6 @@ function hookNavClicks() {
         //TODO: needs a change
         if (e.type == 'navMenuClick') {
             $('#ArticleToggle').hide();
-            $('#ArticleToggle').removeClass('show');
         }
 
         if(e.detail == 'menu-photo-album') {
