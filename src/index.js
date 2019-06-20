@@ -31,20 +31,16 @@ function hookNavClicks() {
 
         //TODO: needs a change
         if (e.type == 'navMenuClick') {
-            $('#ArticleToggle').hide();
+            $('#ArticleToggle').fadeOut();
         }
 
         if(e.detail == 'menu-photo-album') {
             $('#MainBody').hide();
-            $('#MainBody').removeClass('show');
-            $('#AlbumToggle').show();
-            $('#AlbumToggle').addClass('show');
+            $('#AlbumToggle').fadeIn('slow');
         }
         else if(e.detail == 'menu-home' || e.detail == 'nav-home') {
             $('#AlbumToggle').hide();
-            $('#AlbumToggle').removeClass('show');
-            $('#MainBody').show();
-            $('#MainBody').addClass('show');
+            $('#MainBody').fadeIn('slow');
         }
     });
 }
