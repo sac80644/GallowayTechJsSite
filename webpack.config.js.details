@@ -7,6 +7,8 @@
 /*********************************
 * environment and imports
 *********************************/
+const environment = process.env.NODE_ENV || "development";
+
 const path = require('path');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
@@ -15,12 +17,12 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-const environment = process.env.NODE_ENV || "development";
 
 /*********************************
-/ entry 
+/ entry - what file to scan to get dependencies
 *********************************/
 const entry = {
+    //default - main: './src/index.js'
     main: './src/index.js'
 }
 
@@ -28,6 +30,7 @@ const entry = {
 / output
 *********************************/
 const output = {
+    //default:
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].bundle.js'
 }
@@ -35,7 +38,7 @@ const output = {
 /*********************************
 / devtool
 *********************************/
-const devtool = 'inline-source-map';
+const devtool = 'inline-source-map'; // devtool: '#source-map'
 
 /*********************************
 / devServer
@@ -50,17 +53,43 @@ const devServer = {
 *********************************/
 const plugins = [
     
+    //clear output before build
+    //https://github.com/johnagan/clean-webpack-plugin
     new CleanWebpackPlugin(),
     
+    //copy what i need to dist
+    // new CopyWebpackPlugin([
+    //     { 
+    //         from: './src/content', 
+    //         to: './content', 
+    //         ignore: ['*.js'] 
+    //     }
+    // ]),
+
+    //https://github.com/jantimon/html-webpack-plugin
     new HtmlWebpackPlugin({
         template: './src/index.html'
     }),
 
+    //https://github.com/webpack-contrib/mini-css-extract-plugin
     new MiniCssExtractPlugin({
+        // Options similar to the same options in webpackOptions.output
+        // both options are optional
+        // filename: '[name].css',
         filename: 'styles.css',
         chunkFilename: '[id].css',
       }),
 
+    //can shrink from say 1,795 KB to 355 KB but build time is slow.  use only for production build
+    //https://github.com/webpack-contrib/uglifyjs-webpack-plugin
+    //does not work with es6 +
+    //needs to be set in optimize section below
+    // new UglifyJsPlugin(),
+
+    //new uglify - for possible future use
+    //https://github.com/mishoo/UglifyJS2/tree/harmony
+
+    //hmr
     new webpack.HotModuleReplacementPlugin()
 ];
 
@@ -70,20 +99,35 @@ const plugins = [
 const _module = {
     rules: [
         
+        //CSS Option #1
+        //importing css into js modules
+        // {
+        //   test: /\.css$/i,
+        //   use: ['style-loader', 'css-loader'],
+        // },
+
+        //CSS Option #2
+        //moves all required .css into a new file instead of bundling with js
+        //https://github.com/webpack-contrib/mini-css-extract-plugin
         {
             test: /\.css$/,
             use: [
               {
                 loader: MiniCssExtractPlugin.loader,
                 options: {
+                  // you can specify a publicPath here
+                  // by default it uses publicPath in webpackOptions.output
                   publicPath: '../',
-                  hmr: devServer.hot,
+                  hmr: devServer.hot, // process.env.NODE_ENV === 'development',
                 },
               },
               'css-loader',
             ],
         },
 
+        //importing html into js modules
+        //Official - Exports HTML as string. HTML is minimized when the compiler demands.
+        //https://github.com/webpack-contrib/html-loader
         {
             test: /\.(html)$/,
             use: {
@@ -91,6 +135,8 @@ const _module = {
             }
         },
 
+        //The file-loader resolves import/require() on a file into a url and emits the file into the output directory.
+        //https://github.com/webpack-contrib/file-loader
         {
             test: /\.(png|svg|jpg|gif|ico)$/,
             use: [
@@ -98,6 +144,8 @@ const _module = {
             ]
         },
 
+        //https://github.com/babel/babel-loader
+        //https://babeljs.io/blog/2015/10/29/6.0.0/
         {
             test: /\.js$/,
             exclude: /(node_modules|bower_components)/,
@@ -112,7 +160,7 @@ const _module = {
 * Optimization
 *********************************/
 const optimization = {
-    minimize: false,
+    minimize: false,  //by default will not minimize unless mode is production or none.
     minimizer: [new UglifyJsPlugin()]
 }
 

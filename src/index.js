@@ -56,9 +56,9 @@ if(module.hot) {
     module.hot.accept('./portfolio/portfolio.js', function() {
         console.log('accepting hmr from portfolio');
     })
-    module.hot.accept('./contact/contact.js', function() {
-        console.log('accepting hmr from contact');
-    })
+    // module.hot.accept('./contact/contact.js', function() {
+    //     console.log('accepting hmr from contact');
+    // })
     module.hot.accept('./album/album.js', function() {
         console.log('accepting hmr from album');
     })
