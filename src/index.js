@@ -31,21 +31,16 @@ function hookNavClicks() {
 
         //TODO: needs a change
         if (e.type == 'navMenuClick') {
-            $('#ArticleToggle').hide();
-            $('#ArticleToggle').removeClass('show');
+            $('#ArticleToggle').fadeOut();
         }
 
         if(e.detail == 'menu-photo-album') {
             $('#MainBody').hide();
-            $('#MainBody').removeClass('show');
-            $('#AlbumToggle').show();
-            $('#AlbumToggle').addClass('show');
+            $('#AlbumToggle').fadeIn('slow');
         }
         else if(e.detail == 'menu-home' || e.detail == 'nav-home') {
             $('#AlbumToggle').hide();
-            $('#AlbumToggle').removeClass('show');
-            $('#MainBody').show();
-            $('#MainBody').addClass('show');
+            $('#MainBody').fadeIn('slow');
         }
     });
 }
@@ -61,9 +56,9 @@ if(module.hot) {
     module.hot.accept('./portfolio/portfolio.js', function() {
         console.log('accepting hmr from portfolio');
     })
-    module.hot.accept('./contact/contact.js', function() {
-        console.log('accepting hmr from contact');
-    })
+    // module.hot.accept('./contact/contact.js', function() {
+    //     console.log('accepting hmr from contact');
+    // })
     module.hot.accept('./album/album.js', function() {
         console.log('accepting hmr from album');
     })

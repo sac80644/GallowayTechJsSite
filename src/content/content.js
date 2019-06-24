@@ -1,11 +1,9 @@
 import $ from 'jquery';
 import './content.css';
-import what_patterns from './what_patterns.html';
-import favorite_patterns from './favorite_patterns.html';
+import patterns from './patterns.html';
 
 let content = {
-    what_patterns,
-    favorite_patterns,
+    patterns,
     hook: function() {
         //put a hook here...
     }

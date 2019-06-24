@@ -26,10 +26,24 @@ function hookArticleClicks() {
 
         var clickedBy = document.getElementById(e.target.id);
         if (clickedBy) {
-            $('#ArticleToggle').show();
-            $('#ArticleToggle').addClass('show');
+
+
+            var section = clickedBy.getAttribute('section')
             var content = clickedBy.getAttribute('content')
-            document.getElementById('ArticleContent').innerHTML = contentCollection[content];
+
+            if(section && content) {
+                $('#ArticleToggle').hide();
+                
+                //first load a whole html file to keep related articles together
+                var elem = document.createElement('div');
+                elem.innerHTML = contentCollection[section];
+                
+                //then get specific artible
+                var div = elem.children[content];
+                document.getElementById('ArticleContent').innerHTML = div.innerHTML;
+
+                $('#ArticleToggle').fadeIn('slow');
+            }
         }
     });
 }

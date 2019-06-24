@@ -8,42 +8,35 @@ h1, h2, h3, h4, h5, h6 {
 }
 
  .header {
-  padding: 1.777em 1.125em 2.665em 1.125em;
-  margin-bottom: 4.209em;
+  padding: 6.0em 1.125em 2.0em 1.125em;
   background-color: #3e8bc5;
   background-position: center center;
   background-repeat: no-repeat;
+  margin-bottom: 0;
 }
+
 .header p.toggle-container {
   width: 2.369em;
   height: 2.369em;
   margin: 0 0 1.777em;
 }
-.header-index {
-  margin-bottom: 0;
-}
-
-   .header {
-    padding-top: 7.478em;
-    background-color: #3e8bc5;
-  }
-  .background-contrast .header {
+.background-contrast .header {
     margin-left: -3.157em;
     margin-right: -3.157em;
     padding-left: 0;
     padding-right: 0;
   }
-  .background-contrast .footer {
+.background-contrast .footer {
     margin-left: -3.157em;
     margin-right: -3.157em;
     padding-left: 3.157em;
     padding-right: 3.157em;
   }
-  .background-contrast .main-nav {
+.background-contrast .main-nav {
     max-width: 69.75em;
     margin: 0 auto;
   }
-  .csstransforms3d.csstransitions .background-contrast .main-nav {
+.csstransforms3d.csstransitions .background-contrast .main-nav {
     left: auto;
   }
   .site-title,
@@ -55,7 +48,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
 }
 
-  .site-title {
+.site-title {
     font-weight: 400;
     margin: 0;
     margin-bottom: 1rem;
@@ -69,13 +62,13 @@ h1, h2, h3, h4, h5, h6 {
     color: #fff;
     margin-bottom: 0;
   }
-  .site-title small {
+.site-title small {
     filter: alpha(opacity=1.0 * 100);
     -moz-opacity: 0.8;
     -khtml-opacity: 0.8;
     opacity: 0.8;
   }
-  .site-title a {
+.site-title a {
     text-decoration: none;
   }
 
@@ -96,12 +89,12 @@ h1, h2, h3, h4, h5, h6 {
 .site-intro .grav-clone {
   display: none;
 }
-  .site-intro .site-title,
+.site-intro .site-title,
   .site-intro .site-description {
     text-align: center;
   }
 
-  .site-description {
+.site-description {
     font-size: .844em;
     font-weight: 400;
     text-transform: uppercase;
