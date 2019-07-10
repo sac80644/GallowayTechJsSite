@@ -5,7 +5,7 @@ import content from './about.html';
 let about = {
     content: content,
     hook: function() {
-        return 1;
+        //put a hook here...
     }
 };
 
