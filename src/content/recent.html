@@ -5,22 +5,58 @@
                 <div class="article">
                     <h1>The How, What and Why Decisions in Building This Site</h1>
                     <div class="content">
-                        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            <h3>heading three</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        <p> 
+                            So I have written many sites using ASP .NET and to be honest, I am bored.  I even 
+                            created a site using the "new", at the time of this writing, .NET Core 2.2
+                            and Angular 6.0 project.  I did enjoy working with the lean .NET Core framework
+                            but it was just still more of the same.  
+                            <br /> 
+                            It reminds me of when I went backpacking 
+                            through Europe for the first time with my brother and friend.  When we landed and 
+                            got over the jet lag, we did the usual tourist things in London and then started 
+                            moving onto eleven different countries.  We wanted to go to places where people did 
+                            not speak English.  We wanted something different.  So, that is no dig on London, nor 
+                            am I dissing .NET.  But like I said, I got bored and wanted something different and new.
                         </p>
+                            <h3>Artitechtual Decisions</h3>
+                        <p>
+                            I mentioned my on, off and on again relationship with Javascript in this site's intro, and I 
+                            recently began working on a project that is built on a .NET Core Razor Pages framework,
+                            but 90% of the work is done in Typescript.  And that of course means needing to know Javascript. 
+                            Which I am very happy about to be able to put in some solid time usins JS as I feel 
+                            we never really got to know eachother.
+                        </p>
+                        <p>
+                            So Typescript during the day at work, and Javascript at night on this site.  I then took 
+                            the idea of components that I learned building some Angular sites.  So each component consists 
+                            of one .html file, one .css and one .js.  The .js imports the content and becomes an 
+                            encapsulated component exposing both content and functionality.  This is where the lightbulb 
+                            lit up in my head on callbacks which I use in the navbar component to expose events.
+                        </p>
+                        <p>
+                            Lastly, at my day job we use Webpack so that is what I use on this site for bundling, plugins, build, 
+                            webserver, loaders, and my personal fav - hot module replacement.  I did get my feet wet with gulp and 
+                            I like how straight forward it is to get going, but Webpack is what I stuck with.
+                        </p>
+                        <p>
+                            So to wrap up, this site is a Javascript driven, Bootstrap responsive, component based Single Page App (SPA).  
+                            This site was developed using VS Code (love it!), npm, Webpack and git to GitHub for source control.  Oh, and also 
+                            continuous integration between GitHub and my GoDaddy site using SemaphoreCI.
+                        </p>
+                        <p>
+                            <h4>Dependencies:</h4>
+                            <ul>
+                                <li>bootstrap</li><li>jquery</li><li>popper.js</li>
+                            </ul>
+                            <h4>Dev Dependencies:</h4>
+                            <ul>
+                                <li>@babel/core, @babel/preset-env, babel-loader</li>
+                                <li>css-loader, file-loader, html-loader, style-loader</li><li>mini-css-extract-plugin</li>
+                                <li>clean-webpack-plugin, copy-webpack-plugin, html-webpack-plugin, uglify-webpack-plugin</li>
+                                <li>webpack, webpack-cli, webpack-dev-server</li>
+                            </ul>
+                        </p>
+                        <p>This project is available on <a href="https://github.com/sac80644/GallowayTechJsSite" target="_blank">GitHub</a>.</p>
                     </div>
                 </div>
             </article>
