@@ -4,7 +4,7 @@ From Scratch - JavaScript driven, Bootstrap responsive, component based Single P
 
 ## Status
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/sac80644/gallowaytechjssite/master/LICENSE)
-[![Build Status](https://semaphoreci.com/api/v1/sac80644/gallowaytechjssite/branches/master/badge.svg)](https://semaphoreci.com/sac80644/gallowaytechjssite)
+[![Build Status](https://semaphoreci.com/api/v1/sac80644/gallowaytechjssite/branches/master/shields_badge.svg)](https://semaphoreci.com/sac80644/gallowaytechjssite)
 ![GitHub package.json version](https://img.shields.io/github/package-json/v/sac80644/gallowaytechjssite.svg)
 
 
