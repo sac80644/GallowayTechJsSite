@@ -72,21 +72,44 @@
                 <div class="article">
                     <h1>Jimmy Bogard - Verticls Slice Architecture.</h1>
                     <div class="content">
-                        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            <h3>heading three</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        <p> 
+                            So a few months ago at the office I was asked to watch this video 
+                            lecture by Jimmy Bogard.  There are a bunch out there, just do a 
+                            search <a href="https://www.google.com/search?q=Jimmy+Bogard+Verticls+Slice+Architecture" target="_blank">Jimmy Bogard Verticls Slice Architecture</a>.
+                            Or his own site has a short <a href="https://jimmybogard.com/vertical-slice-architecture/" target="_blank">article</a>.
+                            <br />
+                            <br />
+                            After watching and getting a good understanding we began a new effort to update and consolidate 
+                            a large amout of site pages into dashboards.  Instead of the usual n tier architecture we broke up
+                            our site into "feature modules."  Each feature module was a completely separate project
+                            so nothing was shared.  With this approach we were able to have smaller releases.  This meant 
+                            quicker turn around from our QA team, less complexity and developers could work 
+                            without stepping on eachother.
+                            <br />
+                            <br />
+                            Since we are not currently performing any commands, just queries, I have not been able to 
+                            fully see the pros and cons of this approach.  But for what we have done so far I think the part 
+                            I like the most is that as a developer I get to write more of my owne code.  Instead of 
+                            using building blocks that someone else wrote to cobble together a new feature, I get 
+                            to make more decisions and contribute more.  This is a WET vs. DRY approach and it takes some getting used to. 
+                            There is a tendency to make every component from a feature module a generic shared 
+                            component.  We are early on in this development effort and I can already see some components 
+                            growing too complext, but we will figure that out soon enough.
+                            <br />
+                            <br />
+                            In short, I recommend at least watching a presentation, reading about Verticle Slices on 
+                            Jimmy's site or another's.  In his demo he uses <a href="https://github.com/jbogard/MediatR" target="_blank">MediatR</a>. 
+                            Read up on that too.  It is not complex, it is very simple and liberating.
+                        </p>
+                            <h3>Verticle Slices Links</h3>
+                        <p>
+                            <ul>
+                                <li><a href="https://jimmybogard.com/vertical-slice-architecture/">jimmybogard.com - verticle slice architecture</a></li>
+                                <li><a href="https://github.com/jbogard/MediatR" target="_blank">github - MediatR</a></li>
+                                <li><a href="https://github.com/jbogard/ContosoUniversityDotNetCore-Pages"  target="_blank">github - ContosoUniversityDotNetCore using verticle slices</a></li>
+                                <li><a href="https://martinfowler.com/bliki/CQRS.html" target="_blank">martinfowler.com - CQRS</a></li>
+                                <li><a href="https://www.google.com/search?q=wet+vs+dry+code" target="_blank">DRY vs. WET</a></li>
+                            </ul>
                         </p>
                     </div>
                 </div>
