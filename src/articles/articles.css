@@ -17,12 +17,12 @@ Articles
   }
   
   .article .content{
-    font-family: "Computer Modern", serif;
+    font-family: 'Muli', sans-serif;
   }
   
-  .article .content p, .article .content li{
+  /* .article .content p, .article .content li{
     font-size: 1.25em;
-  }
+  } */
   
   .article .content p{
     padding-top:.25em;
