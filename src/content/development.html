@@ -66,21 +66,35 @@
                 <div class="article">
                     <h1>Typescript - General Tips and Tricks</h1>
                     <div class="content">
-                        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            <h3>heading three</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        <p> 
+                            I started using Typescript somewhere mid 2018, but have been 
+                            using it daily for the last few months.  I sometimes feel like  
+                            I am in an odd limbo between C# and Javascript.  Using 
+                            Typescript is an easier transition for someone who is used 
+                            to a strongly typed object oriented language such as C# than 
+                            going straight to Javascript.  But I don't need an easy transition 
+                            and I really wanted to do more pure Javascript.  Nevertheless, 
+                            I do like it and it is my day job for now.  Here are some tidbits 
+                            of info.  And because Typescript is a superset of Javascript, 
+                            I can't help but mix them together. 
+                        </p>
+                            <h2>Spread Operator</h2>
+                        <p>
+                            I came across something like this recently:<br />
+                            <code>var foo = new Set(...args);</code><br />
+                            And I thought, what the heck is that?!? So I looked it up. I found the ... 
+                            called the spread operator, or on the Mozilla site as 
+                            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax" target="_blank">Spread Syntax</a>. 
+                            This looks exactly like <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters" target="_blank">Rest Syntax</a> 
+                            but not the same.  Anyways, today I used it to push an array of object into another array of object like such:<br />
+                            <code>
+                                let firstArray: MyObject[] = [{key: "value1"}, {key: "value2"}, {key: "value3"}]; <br />
+                                let secondArray: MyObject[] = [{key: "value4"}, {key: "value5"}, {key: "value6"}];<br />
+                                firstArray.push(...secondArray);<br />
+                            </code>
+                            And voila. The secondArray's objects are expanded out and pushed into the firstArray. This can 
+                            also be done with Array.concat() or some other methods but I like this one...
+
                         </p>
                     </div>
                 </div>
