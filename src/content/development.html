@@ -80,21 +80,20 @@
                         </p>
                             <h2>Spread Operator</h2>
                         <p>
-                            I came across something like this recently:<br />
-                            <code>var foo = new Set(...args);</code><br />
+                            I came across something like this not too long ago:<br />
+<pre><code>var foo = new Set(...args);</code></pre>
                             And I thought, what the heck is that?!? So I looked it up. I found the ... 
-                            called the spread operator, or on the Mozilla site as 
+                            is referred to as the spread operator, or on the Mozilla site as 
                             <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax" target="_blank">Spread Syntax</a>. 
                             This looks exactly like <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters" target="_blank">Rest Syntax</a> 
-                            but not the same.  Anyways, today I used it to push an array of object into another array of object like such:<br />
-                            <code>
-                                let firstArray: MyObject[] = [{key: "value1"}, {key: "value2"}, {key: "value3"}]; <br />
-                                let secondArray: MyObject[] = [{key: "value4"}, {key: "value5"}, {key: "value6"}];<br />
-                                firstArray.push(...secondArray);<br />
-                            </code>
+                            but not the same.  Anyways, today I used it to push an array of object into another array of object like such:<br /><br />
+<pre>
+<code>let firstArray: MyObject[] = [{key: "value1"}, {key: "value2"}, {key: "value3"}];
+let secondArray: MyObject[] = [{key: "value4"}, {key: "value5"}, {key: "value6"}];
+firstArray.push(...secondArray);</code>
+</pre>
                             And voila. The secondArray's objects are expanded out and pushed into the firstArray. This can 
                             also be done with Array.concat() or some other methods but I like this one...
-
                         </p>
                     </div>
                 </div>
