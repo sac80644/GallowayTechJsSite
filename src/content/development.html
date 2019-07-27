@@ -250,21 +250,39 @@ firstArray.push(...secondArray);</code>
                             during the day already has it up and running.  The one thing 
                             that I really wanted to see was Hot Module Replacement, and that 
                             would prove to be difficult.
-                            <br />
-                            Feel free to come back and I will have the next part of this post 
-                            completed, but in the meantime here is a super simple project that 
-                            shows how to set up Webpack with Hot Module Replacement, along 
-                            with some other things: 
-                            <a href="https://github.com/sac80644/webpack-demo" target="_blank">GitHub</a>
+                        </p>
+                        <p>
+                            Webpack does have some nice online guides to help you get started 
+                            but the guides are mostly just giving you the super ideal and simple 
+                            scenarios.  I went through most of the guides and the Hot Module Replacement 
+                            guide was towards the very end.  You can check it out here 
+                            <a href="https://webpack.js.org/guides/hot-module-replacement" target="_blank">(https://webpack.js.org/guides/hot-module-replacement)</a> 
+                            but you need to have followed steps up to that point to get your project working.  
+                            Or you can get my demo project that I scaled down after going through 
+                            all the guides just to highlight HMR: 
+                            <a href="https://github.com/sac80644/webpack-hmr-demo" target="_blank">GitHub</a>
                         </p>
                             <h3>HMR Versus Live Reloading</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        <p>So if you go to the webpack-hmr-demo GitHub repository mentioned above, 
+                            you will find that it is the simplest implementation of Webpack HMR 
+                            that you can set up.  If you go to the webpack.config.js file, you will find 
+                            a setting (hot: true) under the devServer section.  If you comment this out 
+                            or change it to false, then hot module replacement will be turned off.  By 
+                            default though, Live Reloading will be enabled.  If you run the project and 
+                            in Chrome open dev tools, under console you will see [WDS] Live Reloading enabled. 
+                            If you leave the hot set to true you will also see [WDS] Hot Module Replacement enabled. 
+                            So what is the difference?
+                        </p>
+                        <p>
+                            Live reloading will basically re-build and re-load your site for you after you 
+                            make any modification and save.  This can be a nice time saver, but if your build time 
+                            is long then saving you a click or two doesn't help that much. Hot module replacement 
+                            can help to speed up development in that it only rebuilds the module that you made changes 
+                            to and reloads only that module, not the entire site.  You do have to build your site using 
+                            modules in such a way to take advantage of this feature but if you build it right 
+                            then it is pretty cool.  Download my <a href="https://github.com/sac80644/webpack-hmr-demo" target="_blank">HMR Demo</a>, 
+                            get it running and read <a href="https://webpack.js.org/guides/hot-module-replacement" target="_blank">Webpack's HMR guide</a> 
+                            and it should make more sense to you than it did the first time for me.
                         </p>
                     </div>
                 </div>
